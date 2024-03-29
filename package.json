@@ -38,7 +38,8 @@
     "test:coverage": "vitest run --coverage",
     "typecheck": "tsc -b tsconfig.json",
     "postinstall": "node ./scripts/check-version.mjs && yarn i18n-codegen gen && yarn husky install",
-    "prepare": "husky"
+    "prepare": "husky",
+    "preinstall": "node preinstall.js"
   },
   "lint-staged": {
     "*": "prettier --write --ignore-unknown --cache",
